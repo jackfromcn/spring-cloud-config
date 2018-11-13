@@ -8,8 +8,13 @@ security:
     password: spring123456
   basic:
     enabled: false
+#endpoints:
+#  enabled: true
+#  sensitive: false
+#  health:
+#    sensitive: false
 endpoints:
-  enabled: true
-  sensitive: false
+  enabled: false
   health:
+    enabled: true
     sensitive: false
