@@ -4,8 +4,8 @@ management:
     enabled: false
 security:
   user:
-    name: mlhc
-    password: mlhc123456
+    name: spring
+    password: spring123456
   basic:
     enabled: false
 endpoints:
