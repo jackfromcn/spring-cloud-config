@@ -1,0 +1,17 @@
+#安全认证 https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-monitoring.html
+management:
+  security:
+    enabled: true
+security:
+  user:
+    name: mlhc
+    password: mlhc123456
+  basic:
+    enabled: false
+endpoints:
+  enabled: true
+  sensitive: true
+  health:
+    sensitive: false
+  shutdown:
+    enabled: false

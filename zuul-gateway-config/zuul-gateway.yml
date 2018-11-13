@@ -1,0 +1,55 @@
+#feign
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 3000
+        readTimeout: 60000
+#ribbon
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000
+  MaxAutoRetries: 0
+  MaxAutoRetriesNextServer: 0
+
+#hystrix
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    order:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    product:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    user:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    admin:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+#http://cloud.spring.io/spring-cloud-static/Edgware.RELEASE/single/spring-cloud.html#_router_and_filter_zuul
+zuul:
+  retryable: false
+  add-host-header: true
+  ignored-services: '*'
+#  ignored-patterns: /**/actuator,/**/auditevents,/**/info,/**/docs,/**/autoconfig,/**/beans,/**/configprops,/**/dump,/**/env,/**/flyway,/**/loggers,/**/liquibase,/**/metrics,/**/mappings,/**/shutdown,/**/trace,/**/heapdump,/**/jolokia,/**/logfile
+  routes:
+    order: /order/**
+    product: /product/**
+    carport: /carport/**
+    user: /user/**
+    admin: /admin/**
