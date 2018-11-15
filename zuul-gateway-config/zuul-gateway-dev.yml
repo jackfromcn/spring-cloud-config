@@ -22,3 +22,9 @@ security:
 endpoints:
   enabled: true
   sensitive: false
+
+login:
+  validate:
+    patterns:
+      include: /**
+      exclude: /order/**,/admin/**
