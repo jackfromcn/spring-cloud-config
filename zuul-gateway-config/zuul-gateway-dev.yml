@@ -25,7 +25,7 @@ endpoints:
 
 login:
   validate:
-    required: 0
+    required: false
     patterns:
       include: /**
       exclude: /order/**,/admin/**
