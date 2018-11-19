@@ -28,4 +28,4 @@ login:
     required: true
     patterns:
       include: /**
-      exclude: /order/**,/admin/**,/user/vaildate/**
+      exclude: /user/vaildate/**
