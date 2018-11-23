@@ -21,6 +21,3 @@ endpoints:
     sensitive: false
   shutdown:
     enabled: false
-endpoints:
-  enabled: true
-  sensitive: false
