@@ -14,11 +14,13 @@ security:
     password: spring123456
   basic:
     enabled: false
-#endpoints:
-#  enabled: true
-#  sensitive: false
-#  health:
-#    sensitive: false
+endpoints:
+  enabled: true
+  sensitive: true
+  health:
+    sensitive: false
+  shutdown:
+    enabled: false
 endpoints:
   enabled: true
   sensitive: false
